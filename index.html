@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <script type="module" crossorigin src="/projekt-3/assets/index-BiRyI5cs.js"></script>
-  <link rel="stylesheet" crossorigin href="/projekt-3/assets/index-8OyLuVqT.css">
+  <script type="module" crossorigin src="/projekt-3/assets/index-CVbby7l7.js"></script>
+  <link rel="stylesheet" crossorigin href="/projekt-3/assets/index-DK7LrZ07.css">
 </head>
 <body>
   <div class="app-shell">
@@ -23,19 +23,19 @@
         <nav class="sidebar-nav">
           <a href="#" class="nav-item active" data-view="overview">
             <span class="nav-icon" data-lucide="layout-dashboard"></span>
-            <span class="nav-label" data-i18n="nav.overview">Overview</span>
+            <span class="nav-label" data-i18n="nav.overview">Übersicht</span>
           </a>
           <a href="#" class="nav-item" data-view="orders">
             <span class="nav-icon" data-lucide="shopping-cart"></span>
-            <span class="nav-label" data-i18n="nav.orders">Orders</span>
+            <span class="nav-label" data-i18n="nav.orders">Bestellungen</span>
           </a>
           <a href="#" class="nav-item" data-view="products">
             <span class="nav-icon" data-lucide="package"></span>
-            <span class="nav-label" data-i18n="nav.products">Products</span>
+            <span class="nav-label" data-i18n="nav.products">Produkte</span>
           </a>
           <a href="#" class="nav-item" data-view="customers">
             <span class="nav-icon" data-lucide="users"></span>
-            <span class="nav-label" data-i18n="nav.customers">Customers</span>
+            <span class="nav-label" data-i18n="nav.customers">Kunden</span>
           </a>
           <a href="#" class="nav-item" data-view="analytics">
             <span class="nav-icon" data-lucide="bar-chart-2"></span>
@@ -75,7 +75,7 @@
           </div>
         </div>
         <div class="header-center">
-          <h1 class="page-title" data-i18n="header.title">Analytics Overview</h1>
+          <h1 class="page-title" data-i18n="header.title">Analytics Übersicht</h1>
         </div>
         <div class="header-right">
           <div class="period-filters">
@@ -86,113 +86,8 @@
         </div>
       </header>
 
-      <!-- Dashboard content -->
-      <main class="dashboard" id="dashboard">
-        <!-- KPI Cards -->
-        <section class="kpi-grid reveal-group">
-          <div class="kpi-card reveal-item" id="kpi-revenue">
-            <div class="kpi-header">
-              <span class="kpi-label" data-i18n="kpi.revenue">Revenue</span>
-              <span class="kpi-icon" data-lucide="euro"></span>
-            </div>
-            <div class="kpi-value" id="kpi-revenue-value">—</div>
-            <div class="kpi-trend" id="kpi-revenue-trend"></div>
-          </div>
-          <div class="kpi-card reveal-item" id="kpi-orders">
-            <div class="kpi-header">
-              <span class="kpi-label" data-i18n="kpi.orders">Orders</span>
-              <span class="kpi-icon" data-lucide="shopping-bag"></span>
-            </div>
-            <div class="kpi-value" id="kpi-orders-value">—</div>
-            <div class="kpi-trend" id="kpi-orders-trend"></div>
-          </div>
-          <div class="kpi-card reveal-item" id="kpi-conversion">
-            <div class="kpi-header">
-              <span class="kpi-label" data-i18n="kpi.conversion">Conversion Rate</span>
-              <span class="kpi-icon" data-lucide="percent"></span>
-            </div>
-            <div class="kpi-value" id="kpi-conversion-value">—</div>
-            <div class="kpi-trend" id="kpi-conversion-trend"></div>
-          </div>
-          <div class="kpi-card reveal-item" id="kpi-aov">
-            <div class="kpi-header">
-              <span class="kpi-label" data-i18n="kpi.aov">Avg. Order Value</span>
-              <span class="kpi-icon" data-lucide="trending-up"></span>
-            </div>
-            <div class="kpi-value" id="kpi-aov-value">—</div>
-            <div class="kpi-trend" id="kpi-aov-trend"></div>
-          </div>
-        </section>
-
-        <!-- Main Chart -->
-        <section class="chart-panel panel reveal-item" id="panel-revenue-chart">
-          <div class="panel-header">
-            <div>
-              <h2 class="panel-title" data-i18n="chart.revenue.title">Revenue over Time</h2>
-              <p class="panel-subtitle" data-i18n="chart.revenue.subtitle">Daily totals in EUR</p>
-            </div>
-          </div>
-          <div class="chart-wrap">
-            <canvas id="revenue-chart"></canvas>
-          </div>
-        </section>
-
-        <!-- Secondary Charts -->
-        <div class="secondary-grid">
-          <section class="chart-panel panel reveal-item" id="panel-traffic-chart">
-            <div class="panel-header">
-              <h2 class="panel-title" data-i18n="chart.traffic.title">Traffic Sources</h2>
-            </div>
-            <div class="chart-wrap chart-wrap--donut">
-              <canvas id="traffic-chart"></canvas>
-            </div>
-            <div class="donut-legend" id="traffic-legend"></div>
-          </section>
-
-          <section class="chart-panel panel reveal-item" id="panel-products-chart">
-            <div class="panel-header">
-              <h2 class="panel-title" data-i18n="chart.products.title">Top Products</h2>
-            </div>
-            <div class="chart-wrap chart-wrap--bar">
-              <canvas id="products-chart"></canvas>
-            </div>
-          </section>
-        </div>
-
-        <!-- Bottom row -->
-        <div class="bottom-grid">
-          <!-- Live Orders Feed -->
-          <section class="panel reveal-item" id="panel-orders-feed">
-            <div class="panel-header">
-              <div>
-                <h2 class="panel-title" data-i18n="feed.title">Live Orders</h2>
-                <p class="panel-subtitle" data-i18n="feed.subtitle">Real-time incoming orders</p>
-              </div>
-              <div class="live-badge">
-                <span class="live-dot"></span>
-                <span data-i18n="header.live">Live</span>
-              </div>
-            </div>
-            <div class="orders-feed" id="orders-feed"></div>
-          </section>
-
-          <!-- Conversion Funnel -->
-          <section class="panel reveal-item" id="panel-funnel">
-            <div class="panel-header">
-              <h2 class="panel-title" data-i18n="funnel.title">Conversion Funnel</h2>
-            </div>
-            <div class="funnel" id="funnel"></div>
-          </section>
-
-          <!-- Geo Overview -->
-          <section class="panel reveal-item" id="panel-geo">
-            <div class="panel-header">
-              <h2 class="panel-title" data-i18n="geo.title">Top Markets</h2>
-            </div>
-            <div class="geo-list" id="geo-list"></div>
-          </section>
-        </div>
-      </main>
+      <!-- View container — filled dynamically by JS router -->
+      <main class="dashboard" id="main-content"></main>
     </div>
   </div>
 
