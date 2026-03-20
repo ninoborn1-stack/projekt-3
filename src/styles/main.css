@@ -113,7 +113,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   gap: 10px;
   margin-bottom: 36px;
   padding: 0 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
 }
+.sidebar-logo:hover { opacity: 0.8; }
 
 .logo-mark {
   width: 28px;

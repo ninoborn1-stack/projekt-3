@@ -120,6 +120,21 @@ html, body {
   gap: 16px;
 }
 
+.nav-lang {
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-2);
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: color var(--t), border-color var(--t);
+}
+.nav-lang:hover { color: var(--text-1); border-color: var(--accent); }
+
 .nav-theme {
   width: 36px; height: 36px;
   border-radius: 8px;
