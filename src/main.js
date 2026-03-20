@@ -125,9 +125,12 @@ function switchView(view) {
     main.innerHTML = overviewHTML()
     applyTranslations()
     refreshIcons()
-    loadDashboard(activePeriod)
-    initFeed()
-    initReveal()
+    // rAF ensures canvas elements are laid out before Chart.js reads dimensions
+    requestAnimationFrame(() => {
+      loadDashboard(activePeriod)
+      initFeed()
+      initReveal()
+    })
   } else if (view === 'orders') {
     renderOrdersView(main)
     refreshIcons()
